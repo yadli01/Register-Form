@@ -91,8 +91,12 @@ form.addEventListener('submit', e => {
     let matchPasswordError = checkMatchPassword(password, confirm_pw)
 
     if(emailError || emptyError || nameError || passwordError || matchPasswordError){
-
+        
     }else{
 
     }
 })
+
+username.onblur = () => checkUsername(username,4,16)
+email.onblur = () => checkEmail(email)
+password.onblur = () => checkPassword(password,6)
