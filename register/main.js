@@ -4,6 +4,10 @@ var password = document.getElementById('password')
 var confirm_pw = document.getElementById('confirm-pw')
 var form = document.querySelector('form')
 
+username.onblur = () => checkUsername(username,4,16)
+email.onblur = () => checkEmail(email)
+password.onblur = () => checkPassword(password,6)
+
 function showError(input, message){
     let parent = input.parentElement;
     let small = parent.querySelector('small')
@@ -97,6 +101,3 @@ form.addEventListener('submit', e => {
     }
 })
 
-username.onblur = () => checkUsername(username,4,16)
-email.onblur = () => checkEmail(email)
-password.onblur = () => checkPassword(password,6)

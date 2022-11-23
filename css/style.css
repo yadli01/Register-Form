@@ -54,7 +54,7 @@ h1 {
     transition: 0.2s;
 }
 
-.form-input.error small {
+.form-input.error small, form > small  {
     color: var(--error-color);
 }
 
@@ -75,15 +75,16 @@ h1 {
     cursor: pointer;
 }
 
-.signin {
+.signin, .register {
     text-align: center;
 }
 
-.signin a{
+.signin a, .register a{
     text-decoration: none;
     color: var(--focus-color);
 }
 
-.signin a:hover {
+.signin a:hover , .register a:hover{
     text-decoration: underline;
 }
+
